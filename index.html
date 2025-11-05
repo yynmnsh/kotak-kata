@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" type="image/png" href="https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663057571810/ekPLtCXTqrtcROGV.png" />
+    <link rel="apple-touch-icon" href="https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663057571810/ekPLtCXTqrtcROGV.png" />
+    <title>Kotak-Kata - Permainan Kata Indonesia</title>
+    <!-- Add Google Fonts here, example:
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    -->
+    <script type="module" crossorigin src="/kotak-kata/assets/index-BGrfJi_o.js"></script>
+    <link rel="stylesheet" crossorigin href="/kotak-kata/assets/index-D6cGnr-P.css">
+  </head>
+
+  <body>
+    <!-- GitHub Pages SPA redirect script -->
+    <script>
+      // Restore the route from query parameter (set by 404.html)
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+      
+      // Store redirect in sessionStorage for SPA routing
+      (function() {
+        var l = window.location;
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          sessionStorage.redirect = l.pathname.slice(0, -1) + decoded + l.hash;
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script
+      defer
+      src="https://manus-analytics.com/umami"
+      data-website-id="cb5bf64d-8742-4dcf-9b62-01fbddd82a43"></script>
+  </body>
+
+</html>
